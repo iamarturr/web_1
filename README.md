@@ -1,5 +1,7 @@
 # web_1
 
+!Для того чтобы протестировать код, необходимо в папке confing/db.php подставить свои данные
+
 С не пустой бд:
 ![alt tag](https://image.prntscr.com/image/RkqbVx9mT5K4N5jn5dJLKw.png "Описание будет тут")​
 
