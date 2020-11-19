@@ -1,10 +1,10 @@
 <?php
 
 class Database {
-  private $host = "web";
-  private $dbname = "web";
-  private $user = "root";
-  private $password = "root";
+  private $host = "web"; //будет располагаться сайт web/index.php
+  private $dbname = "web"; //название бд
+  private $user = "root"; //логин phpmyadmin
+  private $password = "root"; //пароль phpmyadmin
   public $connect;
 
   /*
