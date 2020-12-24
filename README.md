@@ -1,6 +1,6 @@
 # web_1
 
-!The code hasn't been completed to the ideal, but you can test it.
+! The code hasn't been completed to the ideal, but you can test it.
 
 [1. Old version](https://github.com/iamarturr/web_1/tree/main/old)
 
