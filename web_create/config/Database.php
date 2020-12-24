@@ -18,7 +18,7 @@ class Database {
   public function __construct()
   {
     try {
-      $this->connect = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->dbname . ";", $this->user, $this->password);
+      $this->connect = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->dbname . ";", $this->user, $this->password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
       $this->connect->exec("set names utf8");
     } catch (PDOException $e) {
         echo "Error connect to database: " . $e->getMessage();

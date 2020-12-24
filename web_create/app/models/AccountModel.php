@@ -1,28 +1,27 @@
 <?php
 namespace App\Model;
 
-use DB\Database;
-use App\Handler\Model;
-
-use PDO;
-use PDOException;
+use App\Model\Model;
 
 class AccountModel extends Model {
   private $table = "accounts"; // таблица с которой будем работать
 
-  /*
-  * выборка якобы авторизоавнного пользователя
-  */
-  
-  public function selectAuthUser()
+  public function selectAll()
   {
-    //$model = new Model();
-    $result = Model->selectAuthUser($this->table);
-
-    return $result;
+    return $this->all($this->table);
   }
-  /*
 
+  public function get_dannie()
+  {
+    return $this->get_dannie();
+  }
+
+  public function query($sql)
+  {
+    return $this->query($sql);
+  }
+
+  /*
   public function delete($id)
   {
     $sql = "DELETE FROM " . $this->table . " WHERE id = " . $id;
