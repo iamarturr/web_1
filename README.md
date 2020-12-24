@@ -1,10 +1,10 @@
 # web_1
 
-!Для того чтобы протестировать код, необходимо в папке confing/db.php подставить свои данные
+!The code hasn't been completed to the ideal, but you can test it.
 
-[1. Старая версия](https://github.com/iamarturr/web_1/tree/main/old)
+[1. Old version](https://github.com/iamarturr/web_1/tree/main/old)
 
-[2. Новая версия](https://github.com/iamarturr/web_1/tree/main/new_1)
+[2. New version](https://github.com/iamarturr/web_1/tree/main/new_1)
 
 
 
