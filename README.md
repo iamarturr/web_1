@@ -25,6 +25,6 @@ The code hasn't been completed to the ideal, but you ~~can~~ test it.
   
   ![alt tag](https://sun9-21.userapi.com/impf/FA-EHByDGO_akUONJWYKkYKHHxDVaoh-VOSwlw/ExPCwZ5obPw.jpg?size=526x247&quality=96&proxy=1&sign=e45fdc83afdbe09e278122b15fe3beec "Описание будет тут")​
   
-  > /<script> alert("xss")</script> - is just a joke, dude
+  > <script> alert("xss")</script> - is just a joke, dude
   
 </details>
