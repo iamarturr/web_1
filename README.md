@@ -12,9 +12,12 @@
 
 
 
-New version:
-
-![alt tag](https://raw.githubusercontent.com/iamarturr/web_1/main/photos/123.jpg "Описание будет тут")​
+<details>
+  <summary>New version</summary>
+  
+  ![alt tag](https://raw.githubusercontent.com/iamarturr/web_1/main/photos/123.jpg "Описание будет тут")​
+  
+</details>
 
 
 <details>
