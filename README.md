@@ -1,4 +1,4 @@
-# web_1
+# Project using OOP and sql
 
 ! The code hasn't been completed to the ideal, but you can test it.
 
