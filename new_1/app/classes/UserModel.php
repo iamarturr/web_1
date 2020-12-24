@@ -1,16 +1,26 @@
 <?php
-namespace App\Model;
+namespace App\Handler;
 
-use App\Model\Model;
+use DB\Database;
 
-class AccountModel extends Model {
-  private $table = "accounts"; // таблица с которой будем работать
+use PDO;
+use PDOException;
 
-  public function selectAll()
-  {
-    return $this->all($this->table);
-  }
+class Model {
+  //private $table = "users"; // таблица с которой будем работать
+
   /*
+  * выборка якобы авторизоавнного пользователя
+  */
+  public function selectAuthUser()
+  {
+    $sql = "SELECT * FROM " . $this->table;
+
+    $db = new Database();
+    $user = $db->query($sql);
+    return $user;
+  }
+
   public function delete($id)
   {
     $sql = "DELETE FROM " . $this->table . " WHERE id = " . $id;
@@ -18,7 +28,7 @@ class AccountModel extends Model {
     $user = $db->query($sql);
     return $user;
   }
-  
+
   public function add($login, $password)
   {
     
@@ -26,5 +36,4 @@ class AccountModel extends Model {
     $db = new Database();
     $user = $db->query($sql);
   }
-  */
 }

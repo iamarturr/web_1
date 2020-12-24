@@ -10,6 +10,17 @@ class AccountModel extends Model {
   {
     return $this->all($this->table);
   }
+
+  public function get_dannie()
+  {
+    return $this->get_dannie();
+  }
+
+  public function query($sql)
+  {
+    return $this->query($sql);
+  }
+
   /*
   public function delete($id)
   {
@@ -18,7 +29,7 @@ class AccountModel extends Model {
     $user = $db->query($sql);
     return $user;
   }
-  
+
   public function add($login, $password)
   {
     

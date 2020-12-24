@@ -2,7 +2,7 @@
 
  require_once __DIR__ . '\vendor\autoload.php';
 
- use App\Model\UserModel;
+ use App\Model\Model;
 
  ?>
 <!DOCTYPE html>
@@ -43,26 +43,34 @@
     <div style="text-align: center; font-family: 'Varela Round', sans-serif;line-height: 30px;">
     	<?php
 
-			$user = new UserModel();
-			$return = $user->selectAuthUser();
+			$user = new Model();
 
-			$returned = json_encode($return, false);
-			$result = json_decode($returned, true);
+			$user = $user->get_dannie();
 
-   			echo '<br>';
+			foreach ($user as $key => $value) {
+				///echo $user[$key]->$value;
+				echo "Мыло: " . $user[$key]->email . "<br>" . "Имя/Фамилие: " . $user[$key]->name . " " . $user[$key]->lastname . "<br>" . "Уровень доступа: " . $user[$key]->name_access . "<br>" . "Уровень доступа: " . $user[$key]->level_access;
+				echo $user[$key]->$keys;
+				echo "<br><br>"; 
+			}
 
+            //foreach ($result as $keys=> $value) {
+				//echo "ID: " . $result[$keys]['id'] . " , Name: " . $result[$keys]['name'] ." , Lastname: " . $result[$keys]['lastname'] . ' , Created: '. $result[$keys]['created_at'] . " <a class='button' style='color: #ffffffa3;' href='delete.php?delete=" . $result[$keys]['id'] . "'>УДАЛИТЬ<a/> <br>";
+			//}
+            /*
 			foreach ($result as $keys=> $value) {
 				echo "ID: " . $result[$keys]['id'] . " , Nickname: " . $result[$keys]['login'] . ' , Created: '. $result[$keys]['created_at'] . " <a class='button' style='color: #ffffffa3;' href='delete.php?delete=" . $result[$keys]['id'] . "'>УДАЛИТЬ<a/> <br>";
 			}
+			*/
 
+			/*
+			<form method="get" action='delete.php'style="text-align: center;border-width: 0;line-height: 30px;">
+				<input class="center" type="text" name="user" placeholder="ИМЯ" >
+				<input class="center" type="text" name="password" placeholder="ФАМИЛИЕ" >
+				<button class="middle" type="submit">добавить</button>	
+			</form>
+			*/
 			?>
-
-
-		<form method="get" action='delete.php'style="text-align: center;border-width: 0;line-height: 30px;">
-			<input class="center" type="text" name="user" placeholder="ЛОГИН" >
-			<input class="center" type="text" name="password" placeholder="ПАРОЛЬ" >
-			<button class="middle" type="submit">добавить</button>	
-		</form>
 
     </div>
 </body>

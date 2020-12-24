@@ -6,10 +6,10 @@ use PDO;
 use PDOException;
 
 class Database {
-  private $host = "web";
-  private $dbname = "web";
+  private $host = "localhost";
+  private $dbname = "web"; //название базы данных
   private $user = "root";
-  private $password = "root";
+  private $password = "";
   public $connect;
 
   /*
@@ -18,7 +18,7 @@ class Database {
   public function __construct()
   {
     try {
-      $this->connect = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->dbname . ";", $this->user, $this->password);
+      $this->connect = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->dbname . ";", $this->user, $this->password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
       $this->connect->exec("set names utf8");
     } catch (PDOException $e) {
         echo "Error connect to database: " . $e->getMessage();
